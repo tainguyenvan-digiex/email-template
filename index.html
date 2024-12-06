@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            min-height: 100vh;
+        }
+
+        .hover-active {
+            transition: opacity 0.3s ease;
+        }
+
+        .hover-active:hover {
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 750px;
+            height: 100%;
+            margin: 30px auto;
+            background-color: var(--white);
+            overflow: hidden;
+        }
+
+        .horizontal-line {
+            height: 1px;
+            width: 100%;
+            background-color: #43E8B3;
+        }
+
+        /* Begin - Main */
+        .socials-list {
+            list-style-type: none;
+            background-color: #3651f3;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 45px;
+        }
+
+        .social-item__thumb {
+            display: block;
+            width: 41px;
+            height: 41px;
+            object-fit: contain;
+        }
+
+        .social-item__thumb--tiktok {
+            height: 48px;
+        }
+
+        .social-item__thumb--linkedin {
+            width: 42px;
+        }
+
+        .hashtag {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+        }
+
+        .hashtag-sub {
+            text-align: center;
+            font-size: 22px;
+            color: var(--black);
+            font-weight: 500;
+        }
+        /* End - Main */
+
+        /* Begin - Footer */
+        .footer {
+            margin-top: 35px;
+        }
+
+        .footer-top {
+            height: 56px;
+        }
+
+        .footer-top-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .footer-main {
+            background-color: var(--black);
+            padding: 35px 15px 30px;
+        }
+
+        .footer-content {
+            max-width: 550px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .footer-socials {
+            display: flex;
+            align-items: flex-end;
+            gap: 25px;
+        }
+
+        .footer-logo {
+            display: block;
+            height: 17px;
+            width: 139px;
+        }
+
+        .footer-logo__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-question {
+            margin-bottom: 10px;
+            width: 233px;
+        }
+
+        .footer-question__link {
+            display: block;
+            width: 140px;
+            height: 33px;
+            margin-bottom: 15px;
+        }
+
+
+        .footer-question__img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-socials__list {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: auto;
+        }
+
+        .footer-socials__item-link {
+            display: block;
+            width: 17px;
+            height: 17px;
+        }
+
+        .footer-socials__item-thumb {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .footer-copyright, .footer-description {
+            text-align: center;
+            font-size: 12px;
+            color: #C5C5C5;
+            padding-bottom: 20px;
+        }
+
+        .footer-description {
+            padding-bottom: 16px;
+        }
+        /* End - Footer */
+
+        /* Mobile and Tablet */
+        @media screen and (max-width: 767px) {
+            .hide-on-tablet-and-mobile {
+                display: none;
+            }
+
+            .container {
+                margin: 0 auto;
+            }
+
+            .social-item__thumb {
+                height: 24px;
+            }
+
+            .hashtag, .hashtag-sub {
+                font-size: 16px;
+            }
+
+            .footer-socials {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+            }
+
+            .footer-socials__list {
+                margin-left: 0;
+                margin-bottom: 5px;
+            }
+
+            .footer-question {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0;
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+        </header>
+
+        <main>
+            <ul class="socials-list">
+                <li class="social-item">
+                    <a class="hover-active" href="https://www.instagram.com/wearegreennation/?igsh=eHpxd3VmcGlpYzd6" target="_blank">
+                        <img class="social-item__thumb" src="https://content.app-us1.com/lWbxp/2024/11/13/e6541601-cc1f-4549-91ff-dfcab43b0bf7.png" alt="Instagram" />
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="hover-active" href="https://www.tiktok.com/@wearegreennation" target="_blank">
+                        <img class="social-item__thumb social-item__thumb--tiktok" src="https://content.app-us1.com/lWbxp/2024/11/13/63838c32-5c82-4ad5-85f5-7790f25329a7.png" alt="Tiktok" />
+                    </a>
+                </li>
+                <li class="social-item">
+                    <a class="hover-active" href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true" target="_blank">
+                        <img class="social-item__thumb social-item__thumb--linkedin" src="https://content.app-us1.com/lWbxp/2024/11/13/68fb543d-b127-4e94-a065-643915b92a79.png" alt="LinkedIn" />
+                    </a>
+                </li>
+            </ul>
+
+            <h3 class="hashtag">#CLEANTECH #ARGENT #PLANETE...</h3>
+            <p class="hashtag-sub">
+                ET SURTOUT... DES
+                <b>INFOS EXCLUSIVES!</b>
+            </p>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-top">
+                <img src="https://content.app-us1.com/lWbxp/2024/11/07/5a9d2145-3105-4b1a-a61a-1c04d08748c1.png" class="footer-top-img" alt="">
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-content">
+                    <div class="footer-socials">
+                        <a href="https://greennation.green/" class="footer-logo">
+                            <img src="https://content.app-us1.com/lWbxp/2024/11/13/43c500b5-6446-4ce6-8258-b046245eda09.png" alt="Footer logo" class="footer-logo__img">
+                        </a>
+
+                        <div class="footer-question">
+                            <a href="mailto:fondateurs@greennation.green" class="footer-question__link hover-active" target="_blank">
+                                <img src="https://content.app-us1.com/lWbxp/2024/11/07/425fd8ec-2834-4a9a-bafc-c9fa9092186c.png" alt="" class="footer-question__img">
+                            </a>
+
+                            <div class="horizontal-line hide-on-tablet-and-mobile"></div>
+                        </div>
+
+                        <ul class="footer-socials__list">
+                            <li class="footer-socials__item">
+                                <a href="https://www.instagram.com/wearegreennation/?igshid=eHpxd3VmcGlpYzd6" target="_blank" class="footer-socials__item-link hover-active">
+                                    <img src="https://content.app-us1.com/lWbxp/2024/11/07/1143bfa3-a275-441f-bc5d-235ed1796124.png" alt="Instagram" class="footer-socials__item-thumb" />
+                                </a>
+                            </li>
+                            <li class="footer-socials__item">
+                                <a href="https://www.tiktok.com/@wearegreennation" target="_blank" class="footer-socials__item-link hover-active">
+                                    <img src="https://content.app-us1.com/lWbxp/2024/11/07/ac182896-ea91-4bcf-8332-c92e16705f48.png" alt="Tiktok" class="footer-socials__item-thumb" />
+                                </a>
+                            </li>
+                            <li class="footer-socials__item">
+                                <a href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true" target="_blank" class="footer-socials__item-link hover-active">
+                                    <img src="https://content.app-us1.com/lWbxp/2024/11/07/59359065-c982-474c-8d40-0baa63436a07.png" alt="LinkedIn" class="footer-socials__item-thumb" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="footer-copyright">© Green Nation 2024</p>
+
+                    <p class="footer-description">
+                        Green Nation, société immatriculée au R.C.S de Paris sous le numéro 953371085, et inscrit au Registre unique des Intermédiaires en Assurance, Banque et Finance sous le numéro d’immatriculation 23007580 en qualité de Mandataire non exclusif en opérations de banque et en services de paiement.
+                    </p>
+                    <p class="footer-description">
+                        Cette carte Visa est émise par UAB StanHope en vertu d'une licence accordée par VISA Europe Limited. UAB Stanhope est agréée et réglementée par la Banque de Lituanie en tant qu'établissement de monnaie électronique en vertu de la loi de la République de Lituanie sur la monnaie électronique et les établissements de monnaie électronique pour l'émission de monnaie électronique (AC : LB002039).
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
