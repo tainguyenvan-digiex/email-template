@@ -36,7 +36,7 @@
             opacity: 0.8;
         }
 
-        .container {
+        #root {
             max-width: 750px;
             height: 100%;
             margin: 30px auto;
@@ -50,7 +50,64 @@
             background-color: #43E8B3;
         }
 
+        .container {
+            max-width: 540px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Begin - Header */
+        .header {
+            padding-top: 30px;
+            margin: 0 15px;
+        }
+
+        .header-logo {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 14px;
+            margin-bottom: 25px;
+        }
+
+        .header-logo__img {
+            display: block;
+            height: 16px;
+        }
+        /* End - Header */
+
         /* Begin - Main */
+        .main {
+            padding: 0 15px 15px;
+        }
+
+        .title, .subtitle {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 0.15px;
+            line-height: 25px;
+        }
+
+        .title {
+            text-transform: uppercase;
+            color: #3062bf;
+            margin-bottom: 25px;
+        }
+
+        .subtitle {
+            text-transform: none;
+            color: var(--black);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            font-size: 13px;
+        }
+        /* End - Main */
+
+        /* Begin - Socials */
         .socials-list {
             list-style-type: none;
             background-color: #3651f3;
@@ -90,15 +147,15 @@
             color: var(--black);
             font-weight: 500;
         }
-        /* End - Main */
+        /* End - Socials */
 
         /* Begin - Footer */
         .footer {
-            margin-top: 35px;
         }
 
         .footer-top {
             height: 56px;
+            margin-top: 35px;
         }
 
         .footer-top-img {
@@ -149,7 +206,6 @@
             margin-bottom: 15px;
         }
 
-
         .footer-question__img {
             display: block;
             width: 100%;
@@ -194,7 +250,7 @@
                 display: none;
             }
 
-            .container {
+            #root {
                 margin: 0 auto;
             }
 
@@ -229,37 +285,57 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div id="root">
+        <header class="header">
+            <div class="container">
+                <div class="header-logo">
+                    <img src="https://content.app-us1.com/lWbxp/2024/11/14/45d197f4-9b38-4573-aa70-23c450116577.png"
+                         alt="Green Nation" class="header-logo__img">
+                </div>
+            </div>
         </header>
 
-        <main>
-            <ul class="socials-list">
-                <li class="social-item">
-                    <a class="hover-active" href="https://www.instagram.com/wearegreennation/?igsh=eHpxd3VmcGlpYzd6" target="_blank">
-                        <img class="social-item__thumb" src="https://content.app-us1.com/lWbxp/2024/11/13/e6541601-cc1f-4549-91ff-dfcab43b0bf7.png" alt="Instagram" />
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="hover-active" href="https://www.tiktok.com/@wearegreennation" target="_blank">
-                        <img class="social-item__thumb social-item__thumb--tiktok" src="https://content.app-us1.com/lWbxp/2024/11/13/63838c32-5c82-4ad5-85f5-7790f25329a7.png" alt="Tiktok" />
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="hover-active" href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true" target="_blank">
-                        <img class="social-item__thumb social-item__thumb--linkedin" src="https://content.app-us1.com/lWbxp/2024/11/13/68fb543d-b127-4e94-a065-643915b92a79.png" alt="LinkedIn" />
-                    </a>
-                </li>
-            </ul>
+        <main class="main">
+            <div class="container">
+                <h1 class="title">
+                    WEBINAIRE MERCREDI 11 DECEMBRE:
+                    <br>
+                    <span class="subtitle">Prenez de l’avance dans la course aux Fondateurs ád</span>
+                </h1>
 
-            <h3 class="hashtag">#CLEANTECH #ARGENT #PLANETE...</h3>
-            <p class="hashtag-sub">
-                ET SURTOUT... DES
-                <b>INFOS EXCLUSIVES!</b>
-            </p>
+                <div class="content">
+                    Your content here...
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
+            <div>
+                <ul class="socials-list">
+                    <li class="social-item">
+                        <a class="hover-active" href="https://www.instagram.com/wearegreennation/?igsh=eHpxd3VmcGlpYzd6" target="_blank">
+                            <img class="social-item__thumb" src="https://content.app-us1.com/lWbxp/2024/11/13/e6541601-cc1f-4549-91ff-dfcab43b0bf7.png" alt="Instagram" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a class="hover-active" href="https://www.tiktok.com/@wearegreennation" target="_blank">
+                            <img class="social-item__thumb social-item__thumb--tiktok" src="https://content.app-us1.com/lWbxp/2024/11/13/63838c32-5c82-4ad5-85f5-7790f25329a7.png" alt="Tiktok" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a class="hover-active" href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true" target="_blank">
+                            <img class="social-item__thumb social-item__thumb--linkedin" src="https://content.app-us1.com/lWbxp/2024/11/13/68fb543d-b127-4e94-a065-643915b92a79.png" alt="LinkedIn" />
+                        </a>
+                    </li>
+                </ul>
+
+                <h3 class="hashtag">#CLEANTECH #ARGENT #PLANETE...</h3>
+                <p class="hashtag-sub">
+                    ET SURTOUT... DES
+                    <b>INFOS EXCLUSIVES!</b>
+                </p>
+            </div>
+
             <div class="footer-top">
                 <img src="https://content.app-us1.com/lWbxp/2024/11/07/5a9d2145-3105-4b1a-a61a-1c04d08748c1.png" class="footer-top-img" alt="">
             </div>
