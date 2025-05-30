@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Green Nation - Webinaire Fondateurs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ==================== CSS VARIABLES ==================== */
+      :root {
+        --color-black: #000000;
+        --color-white: #ffffff;
+        --color-primary: #3062bf;
+        --color-secondary: #3651f3;
+        --color-accent: #43e8b3;
+        --color-gray-light: #f0f0f0;
+        --color-gray-medium: #c5c5c5;
+
+        --font-family: "Poppins", sans-serif;
+        --max-width-container: 750px;
+        --max-width-content: 540px;
+        --transition: all 0.3s ease;
+      }
+
+      /* ==================== RESET & BASE ==================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--color-gray-light);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ==================== UTILITIES ==================== */
+      .container {
+        /*max-width: var(--max-width-content);*/
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .hover-effect {
+        transition: var(--transition);
+      }
+
+      .hover-effect:hover {
+        opacity: 0.8;
+        transform: translateY(-1px);
+      }
+
+      @media (max-width: 767px) {
+        .hide-mobile {
+          display: none !important;
+        }
+      }
+
+      /* ==================== LAYOUT ==================== */
+      .email-wrapper {
+        /*max-width: var(--max-width-container);*/
+        background-color: var(--color-white);
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ==================== HEADER ==================== */
+      .header {
+      }
+
+      .header__logo {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 14px;
+        margin-bottom: 25px;
+      }
+
+      .header__logo-img {
+        height: 16px;
+        width: auto;
+      }
+
+      /* ==================== MAIN CONTENT ==================== */
+      .main {
+        padding-bottom: 15px;
+      }
+
+      .hero__title {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.15px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: var(--color-primary);
+        margin-bottom: 25px;
+      }
+
+      .hero__subtitle {
+        font-size: 25px;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.15px;
+        line-height: 1.2;
+        color: var(--color-black);
+        text-transform: none;
+      }
+
+      .content {
+        font-size: 13px;
+        line-height: 1.5;
+        color: var(--color-black);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      /* ==================== SOCIAL SECTION ==================== */
+      .social-section {
+        background-color: var(--color-secondary);
+        padding: 15px;
+      }
+
+      .social-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 45px;
+        margin-bottom: 20px;
+      }
+
+      .social-item__link {
+        display: block;
+      }
+
+      .social-item__icon {
+        display: block;
+        width: 41px;
+        height: 41px;
+        object-fit: contain;
+      }
+
+      .social-item__icon--tiktok {
+        height: 48px;
+      }
+
+      .social-item__icon--linkedin {
+        width: 42px;
+      }
+
+      .hashtag {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--color-black);
+        margin-bottom: 5px;
+      }
+
+      .hashtag-subtitle {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--color-black);
+      }
+
+      /* ==================== FOOTER ==================== */
+      .footer__banner {
+        height: 56px;
+        margin-top: 35px;
+      }
+
+      .footer__banner-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .footer__main {
+        background-color: var(--color-black);
+        padding: 35px 15px 30px;
+      }
+
+      .footer__content {
+        max-width: 550px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .footer__top {
+        display: flex;
+        align-items: flex-end;
+        gap: 25px;
+        margin-bottom: 20px;
+      }
+
+      .footer__logo {
+        display: block;
+        height: 17px;
+        width: 139px;
+      }
+
+      .footer__logo-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer__contact {
+        margin-bottom: 10px;
+        width: 233px;
+      }
+
+      .footer__contact-link {
+        display: block;
+        width: 140px;
+        height: 33px;
+        margin-bottom: 15px;
+      }
+
+      .footer__contact-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer__divider {
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-accent);
+      }
+
+      .footer__social-list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+      }
+
+      .footer__social-link {
+        display: block;
+        width: 17px;
+        height: 17px;
+      }
+
+      .footer__social-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .footer__text {
+        text-align: center;
+        font-size: 12px;
+        color: var(--color-gray-medium);
+        margin-bottom: 16px;
+      }
+
+      .footer__copyright {
+        padding-bottom: 20px;
+      }
+
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 767px) {
+        .email-wrapper {
+          margin: 0;
+        }
+
+        .social-list {
+          gap: 30px;
+        }
+
+        .social-item__icon {
+          width: 24px;
+          height: 24px;
+        }
+
+        .social-item__icon--tiktok {
+          height: 28px;
+        }
+
+        .hashtag,
+        .hashtag-subtitle {
+          font-size: 16px;
+        }
+
+        .footer__top {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0;
+        }
+
+        .footer__social-list {
+          margin-left: 0;
+          margin-bottom: 5px;
+        }
+
+        .footer__contact {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 0;
+          margin-top: 30px;
+          width: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <header class="header">
+        <div style="position: relative">
+          <img src="./assets/header.png" alt="Header" />
+          <div
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 1;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <div
+              style="
+                max-width: 1135px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin: 0 16px;
+                transform: translateY(-50px);
+              "
+            >
+              <div
+                style="
+                  width: 220px;
+                  height: 28px;
+                  margin-left: auto;
+                  margin-bottom: 70px;
+                "
+              >
+                <img src="./assets/logo.png" alt="Logo" />
+              </div>
+              <h1
+                style="
+                  text-align: center;
+                  color: white;
+                  font-size: 90px;
+                  font-weight: 700;
+                  line-height: 100px;
+                  letter-spacing: -0.32px;
+                  margin-bottom: 20px;
+                "
+              >
+                GREEN NATION<br />ÉVOLUE
+              </h1>
+              <div
+                style="
+                  margin: 0 auto;
+                  display: flex;
+                  justify-content: center;
+                  padding: 0 16px;
+                  background-color: #1ba137;
+                  border-radius: 20px;
+                "
+              >
+                <p
+                  style="
+                    display: inline-block;
+                    font-size: 26px;
+                    font-weight: 500;
+                    color: white;
+                    line-height: 40px;
+                    letter-spacing: -0.32px;
+                  "
+                >
+                  Vos options face à la fermeture de votre compte actuel
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main style="display: flex; flex-direction: column">
+        <div
+          style="
+            max-width: 1173px;
+            width: 100%;
+            margin: 150px auto 32px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+          "
+        >
+          <div style="width: 100%; height: 100%">
+            <span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 500;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+              >Bonjour {Prénom},<br /><br />Chez GreenNation, </span
+            ><span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+              >notre mission</span
+            ><span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 500;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+            >
+              a toujours été claire :<br /></span
+            ><span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+              >Utiliser la puissance de votre carte de paiement pour agir
+              concrètement pour le climat.<br /></span
+            ><span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 500;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+              >Aujourd’hui, nous franchissons </span
+            ><span
+              style="
+                color: var(--Black, black);
+                font-size: 26px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 32px;
+                word-wrap: break-word;
+              "
+              >une étape décisive.</span
+            >
+          </div>
+
+          <div>
+            <div
+              style="
+                width: 100%;
+                color: var(--Black, black);
+                font-size: 40px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 40px;
+                word-wrap: break-word;
+              "
+            >
+              NOUVEAU CAP : ANNULER VOTRE EMPREINTE CARBONE CHAQUE MOIS
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                margin-top: 22px;
+                padding-left: 54px;
+              "
+            >
+              <span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 500;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                >Nous avons décidé de recentrer notre offre autour d’un seul
+                objectif :<br /></span
+              ><span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 400;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                ><br
+              /></span>
+              <ul style="margin-left: 32px">
+                <li>
+                  <span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 700;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >Vous permettre d’annuler votre empreinte carbone chaque
+                    mois,
+                  </span>
+
+                  <span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 500;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >en analysant l’impact de vos dépenses et en le compensant
+                    grâce à l’un des outils les plus puissants de décarbonation
+                    : </span
+                  ><span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 700;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >la plantation d’arbres de mangrove.<br /></span
+                  ><span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 700;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    ><br
+                  /></span>
+                </li>
+              </ul>
+              <span
+                style="
+                  color: var(--Blue-electric, #3651f3);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 700;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                >Les anciens abonnements (0 €, 3 €, 4,5 €) seront supprimés dans
+                60 jours, soit le 02 Aout 2025.</span
+              >
+            </div>
+          </div>
+          <div>
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                color: var(--Black, black);
+                font-size: 40px;
+                font-family: Poppins;
+                font-weight: 700;
+                line-height: 40px;
+                word-wrap: break-word;
+              "
+            >
+              POURQUOI REJOINDRE UN NOUVEL ABONNEMENT ?
+            </div>
+
+            <div style="width: 100%; height: 100%; margin-top: 22px">
+              <span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 500;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                >Parce que chaque paiement peut devenir un geste fort pour la
+                planète.
+                <span
+                  style="
+                    color: var(--Black, black);
+                    font-size: 26px;
+                    font-family: Poppins;
+                    font-weight: 700;
+                    line-height: 32px;
+                    word-wrap: break-word;
+                  "
+                  ><br
+                /></span>
+                <br />Voici nos deux nouvelles formules :<br />
+              </span>
+              <ul style="margin-left: 32px">
+                <li>
+                  <span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 500;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >ABONNEMENT GREEN MAX – 9 €/mois : </span
+                  ><span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 700;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >2 arbres de mangrove plantés chaque mois<br
+                  /></span>
+                </li>
+                <li>
+                  <span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 500;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >ABONNEMENT GREEN INFINITY – 18 €/mois : </span
+                  ><span
+                    style="
+                      color: var(--Black, black);
+                      font-size: 26px;
+                      font-family: Poppins;
+                      font-weight: 700;
+                      line-height: 32px;
+                      word-wrap: break-word;
+                    "
+                    >5 arbres plantés chaque mois + avantages exclusifs</span
+                  >
+                </li>
+              </ul>
+              <span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 500;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                ><span
+                  style="
+                    color: var(--Black, black);
+                    font-size: 26px;
+                    font-family: Poppins;
+                    font-weight: 700;
+                    line-height: 32px;
+                    word-wrap: break-word;
+                  "
+                  ><br /></span></span
+              ><span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 700;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                >Vous pourrez bientôt acheter des arbres supplémentaires à tout
+                moment dans l’app.<br /></span
+              ><span
+                style="
+                  color: var(--Black, black);
+                  font-size: 26px;
+                  font-family: Poppins;
+                  font-weight: 500;
+                  line-height: 32px;
+                  word-wrap: break-word;
+                "
+                >Chaque mois, vous effacez l’impact carbone de vos
+                dépenses.</span
+              >
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <section class="social-section">
+        <ul class="social-list">
+          <li class="social-item">
+            <a
+              href="https://www.instagram.com/wearegreennation/?igsh=eHpxd3VmcGlpYzd6"
+              target="_blank"
+              class="social-item__link hover-effect"
+              aria-label="Suivez-nous sur Instagram"
+            >
+              <img
+                class="social-item__icon"
+                src="https://content.app-us1.com/lWbxp/2024/11/13/e6541601-cc1f-4549-91ff-dfcab43b0bf7.png"
+                alt="Instagram"
+              />
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.tiktok.com/@wearegreennation"
+              target="_blank"
+              class="social-item__link hover-effect"
+              aria-label="Suivez-nous sur TikTok"
+            >
+              <img
+                class="social-item__icon social-item__icon--tiktok"
+                src="https://content.app-us1.com/lWbxp/2024/11/13/63838c32-5c82-4ad5-85f5-7790f25329a7.png"
+                alt="TikTok"
+              />
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true"
+              target="_blank"
+              class="social-item__link hover-effect"
+              aria-label="Suivez-nous sur LinkedIn"
+            >
+              <img
+                class="social-item__icon social-item__icon--linkedin"
+                src="https://content.app-us1.com/lWbxp/2024/11/13/68fb543d-b127-4e94-a065-643915b92a79.png"
+                alt="LinkedIn"
+              />
+            </a>
+          </li>
+        </ul>
+
+        <h2 class="hashtag">#CLEANTECH #ARGENT #PLANETE...</h2>
+        <p class="hashtag-subtitle">
+          ET SURTOUT... DES
+          <strong>INFOS EXCLUSIVES!</strong>
+        </p>
+      </section>
+
+      <footer class="footer">
+        <div class="footer__banner">
+          <img
+            src="https://content.app-us1.com/lWbxp/2024/11/07/5a9d2145-3105-4b1a-a61a-1c04d08748c1.png"
+            class="footer__banner-img"
+            alt="Green Nation Banner"
+          />
+        </div>
+
+        <div class="footer__main">
+          <div class="footer__content">
+            <div class="footer__top">
+              <a
+                href="https://greennation.green/"
+                class="footer__logo hover-effect"
+              >
+                <img
+                  src="https://content.app-us1.com/lWbxp/2024/11/13/43c500b5-6446-4ce6-8258-b046245eda09.png"
+                  alt="Green Nation"
+                  class="footer__logo-img"
+                />
+              </a>
+
+              <div class="footer__contact">
+                <a
+                  href="mailto:fondateurs@greennation.green"
+                  class="footer__contact-link hover-effect"
+                  target="_blank"
+                  aria-label="Contactez-nous par email"
+                >
+                  <img
+                    src="https://content.app-us1.com/lWbxp/2024/11/07/425fd8ec-2834-4a9a-bafc-c9fa9092186c.png"
+                    alt="Contactez-nous"
+                    class="footer__contact-img"
+                  />
+                </a>
+                <div class="footer__divider hide-mobile"></div>
+              </div>
+
+              <ul class="footer__social-list">
+                <li class="footer__social-item">
+                  <a
+                    href="https://www.instagram.com/wearegreennation/?igshid=eHpxd3VmcGlpYzd6"
+                    target="_blank"
+                    class="footer__social-link hover-effect"
+                    aria-label="Instagram"
+                  >
+                    <img
+                      src="https://content.app-us1.com/lWbxp/2024/11/07/1143bfa3-a275-441f-bc5d-235ed1796124.png"
+                      alt="Instagram"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a
+                    href="https://www.tiktok.com/@wearegreennation"
+                    target="_blank"
+                    class="footer__social-link hover-effect"
+                    aria-label="TikTok"
+                  >
+                    <img
+                      src="https://content.app-us1.com/lWbxp/2024/11/07/ac182896-ea91-4bcf-8332-c92e16705f48.png"
+                      alt="TikTok"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+                <li class="footer__social-item">
+                  <a
+                    href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true"
+                    target="_blank"
+                    class="footer__social-link hover-effect"
+                    aria-label="LinkedIn"
+                  >
+                    <img
+                      src="https://content.app-us1.com/lWbxp/2024/11/07/59359065-c982-474c-8d40-0baa63436a07.png"
+                      alt="LinkedIn"
+                      class="footer__social-icon"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <p class="footer__text footer__copyright">© Green Nation 2024</p>
+
+            <p class="footer__text">
+              Green Nation, société immatriculée au R.C.S de Paris sous le
+              numéro 953371085, et inscrit au Registre unique des Intermédiaires
+              en Assurance, Banque et Finance sous le numéro d'immatriculation
+              23007580 en qualité de Mandataire non exclusif en opérations de
+              banque et en services de paiement.
+            </p>
+
+            <p class="footer__text">
+              Cette carte Visa est émise par UAB StanHope en vertu d'une licence
+              accordée par VISA Europe Limited. UAB Stanhope est agréée et
+              réglementée par la Banque de Lituanie en tant qu'établissement de
+              monnaie électronique en vertu de la loi de la République de
+              Lituanie sur la monnaie électronique et les établissements de
+              monnaie électronique pour l'émission de monnaie électronique (AC :
+              LB002039).
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
