@@ -87,6 +87,10 @@
         transform: translateY(-1px);
       }
 
+      .text-center {
+        text-align: center;
+      }
+
       @media (max-width: 767px) {
         .hide-mobile {
           display: none !important;
@@ -185,7 +189,6 @@
         max-width: var(--max-width-main);
         width: 100%;
         margin: 150px auto 32px;
-        border: 1px solid var(--color-black);
         display: flex;
         flex-direction: column;
         gap: 100px;
@@ -250,10 +253,116 @@
         margin-left: 32px;
       }
 
+      /* ==================== OPTIONS SECTION ==================== */
+      .options-container {
+        width: 100%;
+        margin-top: 46px;
+      }
+
+      .options-list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .option-item {
+        margin-bottom: 32px;
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .option-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .option-number {
+        display: inline-block;
+        font-weight: 700;
+        font-size: var(--font-size-large-text);
+        font-family: var(--font-family);
+        color: var(--color-black);
+        margin-right: 8px;
+        line-height: 36px;
+        flex-shrink: 0;
+      }
+
+      .option-content {
+        color: var(--color-black);
+        font-size: var(--font-size-large-text);
+        font-family: var(--font-family);
+        line-height: 36px;
+        word-wrap: break-word;
+      }
+
+      .option-content--bold {
+        font-weight: 700;
+      }
+
+      .option-content--normal {
+        font-weight: 500;
+      }
+
+      /* ==================== WARNING SECTION ==================== */
+      .warning-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .warning-icon-container {
+        width: 76px;
+        height: 65px;
+        flex-shrink: 0;
+      }
+
+      .warning-text {
+        color: var(--color-black);
+        font-size: var(--font-size-large-text);
+        font-family: var(--font-family);
+        font-weight: 700;
+        line-height: var(--line-height-tight);
+        word-wrap: break-word;
+        flex: 1;
+      }
+
+      /* ==================== CLOSING MESSAGE ==================== */
+      .closing-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 35px;
+      }
+
+      .closing-content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .closing-text {
+        color: var(--color-black);
+        font-size: var(--font-size-medium);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: var(--line-height-tight);
+        word-wrap: break-word;
+      }
+
+      .closing-text--bold {
+        font-weight: 700;
+      }
+
       /* ==================== SOCIAL SECTION ==================== */
       .social-section {
         background-color: var(--color-secondary);
         padding: 15px;
+        min-height: 159px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .social-list {
@@ -261,8 +370,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 45px;
-        margin-bottom: 20px;
+        gap: 80px;
       }
 
       .social-item__link {
@@ -271,17 +379,17 @@
 
       .social-item__icon {
         display: block;
-        width: 41px;
-        height: 41px;
+        width: 80px;
+        height: 80px;
         object-fit: contain;
       }
 
       .social-item__icon--tiktok {
-        height: 48px;
+        height: 90px;
       }
 
       .social-item__icon--linkedin {
-        width: 42px;
+        width: 80px;
       }
 
       .hashtag {
@@ -299,10 +407,45 @@
         color: var(--color-black);
       }
 
+      /* ==================== HASHTAG SECTION ==================== */
+      .hashtag-section {
+        max-width: var(--max-width-main);
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 32px;
+      }
+
+      .hashtag-title {
+        color: var(--color-black);
+        font-size: var(--font-size-xlarge);
+        font-family: var(--font-family);
+        font-weight: 700;
+        line-height: 53px;
+        letter-spacing: 0.36px;
+        word-wrap: break-word;
+      }
+
+      .hashtag-subtitle-text {
+        color: var(--color-black);
+        font-size: var(--font-size-xlarge);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 53px;
+        letter-spacing: 0.36px;
+        word-wrap: break-word;
+      }
+
+      .hashtag-highlight {
+        font-weight: 700;
+      }
+
       /* ==================== FOOTER ==================== */
+      .footer {
+        margin-top: -100px;
+      }
+
       .footer__banner {
-        height: 56px;
-        margin-top: 35px;
+        transform: translateY(60%);
       }
 
       .footer__banner-img {
@@ -313,12 +456,14 @@
       }
 
       .footer__main {
-        background-color: var(--color-black);
+        position: relative;
+        z-index: 1;
+        background-color: #171d1b;
         padding: 35px 15px 30px;
       }
 
       .footer__content {
-        max-width: 550px;
+        /* max-width: 550px; */
         width: 100%;
         margin: 0 auto;
       }
@@ -344,13 +489,12 @@
 
       .footer__contact {
         margin-bottom: 10px;
-        width: 233px;
       }
 
       .footer__contact-link {
         display: block;
-        width: 140px;
-        height: 33px;
+        width: 585px;
+        height: 95px;
         margin-bottom: 15px;
       }
 
@@ -397,7 +541,242 @@
         padding-bottom: 20px;
       }
 
+      .footer__main-content {
+        background-color: #171d1b;
+        padding: 42px 15px 102px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer__contact-section {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 23px;
+      }
+
+      .footer__contact-container {
+        max-width: 585px;
+        width: 100%;
+        height: 95px;
+      }
+
+      .footer__contact-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .footer__bottom-section {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer__bottom-container {
+        max-width: 1109px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .footer__logo-container {
+        width: 276px;
+        height: 30px;
+      }
+
+      .footer__logo-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .footer__divider-line {
+        flex: 1;
+        height: 1px;
+        background-color: #43e8b3;
+      }
+
+      .footer__social-container {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .footer__social-item {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+
+      .footer__social-icon {
+        filter: invert(29%) sepia(94%) saturate(7496%) hue-rotate(211deg)
+          brightness(94%) contrast(101%);
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .footer__copyright-text {
+        width: 100%;
+        text-align: center;
+        color: var(--color-gray-medium);
+        font-size: var(--font-size-tiny);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 14.06px;
+        word-wrap: break-word;
+        margin-top: 22px;
+        margin-bottom: 30px;
+      }
+
+      .footer__legal-section {
+        display: flex;
+        justify-content: center;
+      }
+
+      .footer__legal-text {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: var(--color-gray-medium);
+        font-size: var(--font-size-tiny);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 14.06px;
+        word-wrap: break-word;
+        max-width: 904px;
+      }
+
+      .footer__unsubscribe-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 64px;
+        margin-bottom: 100px;
+      }
+
+      .footer__unsubscribe-container {
+        width: 100%;
+        text-align: center;
+        max-width: 1110px;
+      }
+
+      .footer__unsubscribe-text {
+        color: var(--color-black);
+        font-size: var(--font-size-medium);
+        font-family: var(--font-family);
+        font-weight: 500;
+        line-height: 28px;
+        word-wrap: break-word;
+      }
+
+      .footer__unsubscribe-link {
+        color: var(--color-black);
+        font-size: var(--font-size-medium);
+        font-family: var(--font-family);
+        font-weight: 500;
+        text-decoration: underline;
+        line-height: 28px;
+        word-wrap: break-word;
+      }
+
+      .footer__address-link {
+        color: var(--color-blue-electric);
+        font-size: var(--font-size-medium);
+        font-family: var(--font-family);
+        font-weight: 500;
+        text-decoration: underline;
+        line-height: 28px;
+        word-wrap: break-word;
+      }
+
       /* ==================== RESPONSIVE ==================== */
+
+      /* Tablet Styles */
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .header__title {
+          font-size: 70px;
+          line-height: 80px;
+        }
+
+        .header__subtitle {
+          font-size: 22px;
+          line-height: 30px;
+        }
+
+        .main__container {
+          margin: 120px auto 24px;
+          gap: 80px;
+          padding: 24px;
+        }
+
+        .section-title {
+          font-size: 36px;
+          line-height: 42px;
+        }
+
+        .intro-text,
+        .content-text,
+        .option-content {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .option-number {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        .hashtag-title,
+        .hashtag-subtitle-text {
+          font-size: 32px;
+          line-height: 42px;
+        }
+
+        .social-list {
+          gap: 50px;
+        }
+
+        .social-item__icon {
+          width: 60px;
+          height: 60px;
+        }
+
+        .social-item__icon--tiktok {
+          height: 68px;
+        }
+
+        .footer__bottom-container {
+          gap: 30px;
+        }
+
+        .footer__logo-container {
+          width: 220px;
+          height: 25px;
+        }
+
+        .footer__social-container {
+          gap: 24px;
+        }
+
+        .footer__social-item {
+          width: 25px;
+          height: 25px;
+        }
+
+        .footer__contact-container {
+          max-width: 450px;
+          height: 75px;
+        }
+
+        .footer__unsubscribe-text,
+        .footer__unsubscribe-link,
+        .footer__address-link {
+          font-size: 20px;
+          line-height: 26px;
+        }
+      }
+
+      /* Mobile Styles */
       @media (max-width: 767px) {
         .email-wrapper {
           margin: 0;
@@ -439,7 +818,13 @@
         }
 
         .intro-text,
-        .content-text {
+        .content-text,
+        .option-content {
+          font-size: 20px;
+          line-height: 26px;
+        }
+
+        .option-number {
           font-size: 20px;
           line-height: 26px;
         }
@@ -462,6 +847,63 @@
           font-size: 16px;
         }
 
+        .hashtag-title,
+        .hashtag-subtitle-text {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .footer__bottom-container {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .footer__logo-container {
+          width: 200px;
+          height: 22px;
+        }
+
+        .footer__social-container {
+          gap: 20px;
+        }
+
+        .footer__social-item {
+          width: 24px;
+          height: 24px;
+        }
+
+        .footer__contact-container {
+          max-width: 300px;
+          height: 60px;
+        }
+
+        .footer__main-content {
+          padding: 30px 15px 60px;
+        }
+
+        .footer__unsubscribe-section {
+          margin-top: 40px;
+          margin-bottom: 60px;
+          padding: 0 20px;
+        }
+
+        .footer__unsubscribe-text,
+        .footer__unsubscribe-link,
+        .footer__address-link {
+          font-size: 16px;
+          line-height: 22px;
+        }
+
+        .footer__legal-text {
+          font-size: 11px;
+          line-height: 13px;
+        }
+
+        .footer__copyright-text {
+          font-size: 11px;
+          line-height: 13px;
+        }
+
         .footer__top {
           flex-direction: column;
           justify-content: center;
@@ -481,6 +923,28 @@
           margin-bottom: 0;
           margin-top: 30px;
           width: auto;
+        }
+
+        .closing-text {
+          font-size: 18px;
+          line-height: 24px;
+        }
+
+        .warning-container {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 15px;
+        }
+
+        .warning-icon-container {
+          width: 60px;
+          height: 50px;
+        }
+
+        .warning-text {
+          font-size: 18px;
+          line-height: 24px;
         }
       }
     </style>
@@ -604,127 +1068,30 @@
           <div>
             <div class="section-title">VOS OPTIONS</div>
             <div class="section-content">
-              <div style="width: 100%; height: 100%; margin-top: 46px">
-                <ul style="padding-left: 0; margin-left: 0">
-                  <li
-                    style="
-                      margin-bottom: 32px;
-                      list-style: none;
-                      display: flex;
-                      align-items: flex-start;
-                    "
-                  >
-                    <span
-                      style="
-                        display: inline-block;
-                        font-weight: 700;
-                        font-size: 26px;
-                        font-family: Poppins, sans-serif;
-                        color: var(--color-black, #000);
-                        margin-right: 8px;
-                        line-height: 36px;
-                      "
-                      >1.</span
-                    >
-                    <span>
-                      <span
-                        style="
-                          color: var(--color-black, #000);
-                          font-size: 26px;
-                          font-family: Poppins, sans-serif;
-                          font-weight: 700;
-                          line-height: 36px;
-                          word-wrap: break-word;
-                        "
-                        >Passer à un nouvel abonnement depuis l’app</span
+              <div class="options-container">
+                <ul class="options-list">
+                  <li class="option-item">
+                    <span class="option-number">1.</span>
+                    <div>
+                      <span class="option-content option-content--bold"
+                        >Passer à un nouvel abonnement depuis l'app</span
                       >
-                      <span
-                        style="
-                          color: var(--color-black, #000);
-                          font-size: 26px;
-                          font-family: Poppins, sans-serif;
-                          font-weight: 500;
-                          line-height: 36px;
-                          word-wrap: break-word;
-                        "
-                      >
+                      <span class="option-content option-content--normal">
                         (si vous êtes à jour)<br />
+                        - Engagement de 12 mois, paiement ajusté<br />
+                        - Régularisation nécessaire en cas d'impayé
                       </span>
-                      <span
-                        style="
-                          color: var(--color-black, #000);
-                          font-size: 26px;
-                          font-family: Poppins, sans-serif;
-                          font-weight: 500;
-                          line-height: 36px;
-                          word-wrap: break-word;
-                        "
-                      >
-                        - Engagement de 12 mois, paiement ajusté<br />-
-                        Régularisation nécessaire en cas d’impayé
-                      </span>
-                    </span>
+                    </div>
                   </li>
-                  <li
-                    style="
-                      margin-bottom: 32px;
-                      list-style: none;
-                      display: flex;
-                      align-items: flex-start;
-                    "
-                  >
-                    <span
-                      style="
-                        display: inline-block;
-                        font-weight: 700;
-                        font-size: 26px;
-                        font-family: Poppins, sans-serif;
-                        color: var(--color-black, #000);
-                        margin-right: 8px;
-                        line-height: 36px;
-                      "
-                      >2.</span
+                  <li class="option-item">
+                    <span class="option-number">2.</span>
+                    <span class="option-content option-content--bold"
+                      >Fermer votre compte avant le 29 juillet 2025</span
                     >
-                    <span
-                      style="
-                        color: var(--color-black, #000);
-                        font-size: 26px;
-                        font-family: Poppins, sans-serif;
-                        font-weight: 700;
-                        line-height: 36px;
-                        word-wrap: break-word;
-                      "
-                      >Fermer votre compte avant le 29 juillet 2025<br
-                    /></span>
                   </li>
-                  <li
-                    style="
-                      list-style: none;
-                      display: flex;
-                      align-items: flex-start;
-                    "
-                  >
-                    <span
-                      style="
-                        display: inline-block;
-                        font-weight: 700;
-                        font-size: 26px;
-                        font-family: Poppins, sans-serif;
-                        color: var(--color-black, #000);
-                        margin-right: 8px;
-                        line-height: 36px;
-                      "
-                      >3.</span
-                    >
-                    <span
-                      style="
-                        color: var(--color-black, #000);
-                        font-size: 26px;
-                        font-family: Poppins, sans-serif;
-                        font-weight: 700;
-                        line-height: 36px;
-                        word-wrap: break-word;
-                      "
+                  <li class="option-item">
+                    <span class="option-number">3.</span>
+                    <span class="option-content option-content--bold"
                       >Ne rien faire → le compte sera automatiquement fermé à
                       cette date</span
                     >
@@ -735,27 +1102,13 @@
           </div>
 
           <div>
-            <div style="width: 100%; height: 100%; position: relative">
-              <div style="width: 76px; height: 65px">
+            <div class="warning-container">
+              <div class="warning-icon-container">
                 <img src="./assets/warning.svg" alt="Alerte" />
               </div>
-              <div
-                style="
-                  width: 1080.18px;
-                  height: 64px;
-                  left: 113.54px;
-                  top: 0px;
-                  position: absolute;
-                  color: var(--Black, black);
-                  font-size: 26px;
-                  font-family: Poppins;
-                  font-weight: 700;
-                  line-height: 32px;
-                  word-wrap: break-word;
-                "
-              >
+              <div class="warning-text">
                 Important : Si vous ne réglez pas un impayé, certaines
-                fonctionnalités seront<br />gelées dans l’app après 7 jours. Le
+                fonctionnalités seront gelées dans l'app après 7 jours. Le
                 compte sera clôturé après 60 jours.
               </div>
             </div>
@@ -782,47 +1135,21 @@
           </div>
 
           <div>
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 35px;
-                display: inline-flex;
-              "
-            >
-              <div style="align-self: stretch; flex: 1 1 0; text-align: center">
-                <span
-                  style="
-                    color: var(--Black, black);
-                    font-size: 22px;
-                    font-family: Poppins;
-                    font-weight: 500;
-                    line-height: 32px;
-                    word-wrap: break-word;
-                  "
+            <div class="closing-container">
+              <div class="closing-content">
+                <span class="closing-text"
                   >Merci pour votre confiance<br />Nous espérons vous retrouver
                   dans cette nouvelle version de GreenNation, plus engagée que
                   jamais.<br /><br />À bientôt,<br /></span
-                ><span
-                  style="
-                    color: var(--Black, black);
-                    font-size: 22px;
-                    font-family: Poppins;
-                    font-weight: 700;
-                    line-height: 32px;
-                    word-wrap: break-word;
-                  "
-                  >L’équipe Green Nation</span
+                ><span class="closing-text closing-text--bold"
+                  >L'équipe Green Nation</span
                 >
               </div>
             </div>
           </div>
 
           <div>
-            <div class="section-title" style="text-align: center">
+            <div class="section-title text-center">
               Ne passez pas à côté de notre actu !
             </div>
           </div>
@@ -840,7 +1167,7 @@
             >
               <img
                 class="social-item__icon"
-                src="https://content.app-us1.com/lWbxp/2024/11/13/e6541601-cc1f-4549-91ff-dfcab43b0bf7.png"
+                src="./assets/instagram.svg"
                 alt="Instagram"
               />
             </a>
@@ -854,7 +1181,7 @@
             >
               <img
                 class="social-item__icon social-item__icon--tiktok"
-                src="https://content.app-us1.com/lWbxp/2024/11/13/63838c32-5c82-4ad5-85f5-7790f25329a7.png"
+                src="./assets/tiktok.svg"
                 alt="TikTok"
               />
             </a>
@@ -868,124 +1195,131 @@
             >
               <img
                 class="social-item__icon social-item__icon--linkedin"
-                src="https://content.app-us1.com/lWbxp/2024/11/13/68fb543d-b127-4e94-a065-643915b92a79.png"
+                src="./assets/linkedin.svg"
                 alt="LinkedIn"
               />
             </a>
           </li>
         </ul>
+      </section>
 
-        <h2 class="hashtag">#CLEANTECH #ARGENT #PLANETE...</h2>
-        <p class="hashtag-subtitle">
-          ET SURTOUT... DES
-          <strong>INFOS EXCLUSIVES!</strong>
-        </p>
+      <section class="hashtag-section">
+        <div class="hashtag-content">
+          <span class="hashtag-title"
+            >#CLEANTECH #ARGENT #PLANETE...<br
+          /></span>
+          <span class="hashtag-subtitle-text">ET SURTOUT... DES </span>
+          <span class="hashtag-title hashtag-highlight">INFOS EXCLUSIVES!</span>
+        </div>
       </section>
 
       <footer class="footer">
         <div class="footer__banner">
           <img
-            src="https://content.app-us1.com/lWbxp/2024/11/07/5a9d2145-3105-4b1a-a61a-1c04d08748c1.png"
+            src="./assets/frise.png "
             class="footer__banner-img"
             alt="Green Nation Banner"
           />
         </div>
 
-        <div class="footer__main">
-          <div class="footer__content">
-            <div class="footer__top">
-              <a
-                href="https://greennation.green/"
-                class="footer__logo hover-effect"
-              >
-                <img
-                  src="https://content.app-us1.com/lWbxp/2024/11/13/43c500b5-6446-4ce6-8258-b046245eda09.png"
-                  alt="Green Nation"
-                  class="footer__logo-img"
-                />
-              </a>
+        <div class="footer__main-content">
+          <div class="footer__contact-section">
+            <div class="footer__contact-container">
+              <img
+                src="./assets/footer-contact.png"
+                alt="Contact us"
+                class="footer__contact-image"
+              />
+            </div>
+          </div>
 
-              <div class="footer__contact">
-                <a
-                  href="mailto:fondateurs@greennation.green"
-                  class="footer__contact-link hover-effect"
-                  target="_blank"
-                  aria-label="Contactez-nous par email"
-                >
-                  <img
-                    src="https://content.app-us1.com/lWbxp/2024/11/07/425fd8ec-2834-4a9a-bafc-c9fa9092186c.png"
-                    alt="Contactez-nous"
-                    class="footer__contact-img"
-                  />
-                </a>
-                <div class="footer__divider hide-mobile"></div>
+          <div class="footer__bottom-section">
+            <div class="footer__bottom-container">
+              <div class="footer__logo-container">
+                <img
+                  src="./assets/logo.png"
+                  alt="Footer logo"
+                  class="footer__logo-image"
+                />
               </div>
 
-              <ul class="footer__social-list">
-                <li class="footer__social-item">
-                  <a
-                    href="https://www.instagram.com/wearegreennation/?igshid=eHpxd3VmcGlpYzd6"
-                    target="_blank"
-                    class="footer__social-link hover-effect"
-                    aria-label="Instagram"
-                  >
-                    <img
-                      src="https://content.app-us1.com/lWbxp/2024/11/07/1143bfa3-a275-441f-bc5d-235ed1796124.png"
-                      alt="Instagram"
-                      class="footer__social-icon"
-                    />
-                  </a>
-                </li>
-                <li class="footer__social-item">
-                  <a
-                    href="https://www.tiktok.com/@wearegreennation"
-                    target="_blank"
-                    class="footer__social-link hover-effect"
-                    aria-label="TikTok"
-                  >
-                    <img
-                      src="https://content.app-us1.com/lWbxp/2024/11/07/ac182896-ea91-4bcf-8332-c92e16705f48.png"
-                      alt="TikTok"
-                      class="footer__social-icon"
-                    />
-                  </a>
-                </li>
-                <li class="footer__social-item">
-                  <a
-                    href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true"
-                    target="_blank"
-                    class="footer__social-link hover-effect"
-                    aria-label="LinkedIn"
-                  >
-                    <img
-                      src="https://content.app-us1.com/lWbxp/2024/11/07/59359065-c982-474c-8d40-0baa63436a07.png"
-                      alt="LinkedIn"
-                      class="footer__social-icon"
-                    />
-                  </a>
-                </li>
-              </ul>
+              <div class="footer__divider-line"></div>
+
+              <div class="footer__social-container">
+                <a
+                  class="footer__social-item hover-effect"
+                  href="https://www.instagram.com/wearegreennation/?igsh=eHpxd3VmcGlpYzd6"
+                  target="_blank"
+                  aria-label="Suivez-nous sur Instagram"
+                >
+                  <img
+                    src="./assets/instagram.svg"
+                    alt="Instagram"
+                    class="footer__social-icon"
+                  />
+                </a>
+
+                <a
+                  class="footer__social-item hover-effect"
+                  href="https://www.tiktok.com/@wearegreennation"
+                  target="_blank"
+                  aria-label="Suivez-nous sur TikTok"
+                >
+                  <img
+                    src="./assets/tiktok.svg"
+                    alt="TikTok"
+                    class="footer__social-icon"
+                  />
+                </a>
+
+                <a
+                  class="footer__social-item hover-effect"
+                  href="https://www.linkedin.com/company/wearegreennation/?viewAsMember=true"
+                  target="_blank"
+                  aria-label="Suivez-nous sur LinkedIn"
+                >
+                  <img
+                    src="./assets/linkedin.svg"
+                    alt="LinkedIn"
+                    class="footer__social-icon"
+                  />
+                </a>
+              </div>
             </div>
+          </div>
 
-            <p class="footer__text footer__copyright">© Green Nation 2024</p>
-
-            <p class="footer__text">
-              Green Nation, société immatriculée au R.C.S de Paris sous le
+          <div class="footer__copyright-text">© Green Nation 2024</div>
+          <div class="footer__legal-section">
+            <div class="footer__legal-text">
+              > Green Nation, société immatriculée au R.C.S de Paris sous le
               numéro 953371085, et inscrit au Registre unique des Intermédiaires
-              en Assurance, Banque et Finance sous le numéro d'immatriculation
+              en Assurance, Banque et Finance sous le numéro d’immatriculation
               23007580 en qualité de Mandataire non exclusif en opérations de
-              banque et en services de paiement.
-            </p>
+              banque et en services de paiement.<br /><br /><br />Cette carte
+              Visa est émise par UAB StanHope en vertu d'une licence accordée
+              par VISA Europe Limited. UAB Stanhope est agréée et réglementée
+              par la Banque de Lituanie en tant qu'établissement de monnaie
+              électronique en vertu de la loi de la République de Lituanie sur
+              la monnaie électronique et les établissements de monnaie
+              électronique pour l'émission de monnaie électronique (AC :
+              LB002039). <br /><br /><br />
+            </div>
+          </div>
+        </div>
 
-            <p class="footer__text">
-              Cette carte Visa est émise par UAB StanHope en vertu d'une licence
-              accordée par VISA Europe Limited. UAB Stanhope est agréée et
-              réglementée par la Banque de Lituanie en tant qu'établissement de
-              monnaie électronique en vertu de la loi de la République de
-              Lituanie sur la monnaie électronique et les établissements de
-              monnaie électronique pour l'émission de monnaie électronique (AC :
-              LB002039).
-            </p>
+        <div class="footer__unsubscribe-section">
+          <div class="footer__unsubscribe-container">
+            <span class="footer__unsubscribe-text"
+              >Sent to: c.garreau@greennation.green<br /><br /></span
+            ><span class="footer__unsubscribe-link"
+              >Pour vous désinscrire, cliquez ici.<br /></span
+            ><span class="footer__unsubscribe-text"><br />Green Nation, </span
+            ><a
+              class="footer__address-link"
+              href="https://g.co/kgs/cBz7Dd9"
+              target="_blank"
+              >48 Rue de la Bienfaisance, 75008 Paris, France</a
+            >
           </div>
         </div>
       </footer>
