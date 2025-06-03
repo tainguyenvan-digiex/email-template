@@ -25,6 +25,7 @@
     <style>
       * {
         box-sizing: border-box;
+        font-family: 'Poppins', Arial, Helvetica, sans-serif;
       }
 
       body {
@@ -113,6 +114,18 @@
           padding: 5px 15px 0 0 !important;
         }
       }
+
+      @media (min-width: 720px) {
+        .header-img, .header-img-2 {
+          background-size: contain !important;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .header-img-2 td {
+          height: 200px !important; /* Adjust for mobile */
+        }
+      }
     </style>
     <!--[if mso]>
       <style>
@@ -163,14 +176,37 @@
               border="0"
               cellpadding="0"
               cellspacing="0"
-              class="row row-1"
+              class="row row-1 header-img-2"
               role="presentation"
               style="
-                mso-table-lspace: 0pt;
-                mso-table-rspace: 0pt;
+                background-image: url('https://public-assets.greennation.green/email/template/header_2.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                max-width: 800px;
+              "
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <td style="height: 350px; line-height: 0; font-size: 0;">
+                    &nbsp;
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <table
+              align="center"
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              class="row row-1 header-img"
+              role="presentation"
+              style="
                 background-image: url('https://public-assets.greennation.green/email/template/header.png');
                 background-repeat: no-repeat;
                 background-size: cover;
+                background-position: center center;
               "
               width="100%"
             >
@@ -192,7 +228,7 @@
                         padding-left: 16px;
                         padding-right: 16px;
                         padding-top: 60px;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -352,7 +388,7 @@
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
             <table
               align="center"
               border="0"
@@ -378,7 +414,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -426,7 +462,7 @@
                                     "
                                   >
                                     <p style="margin: 0; margin-bottom: 16px">
-                                      Bonjour {Prénom},<br /><br />Chez
+                                      Bonjour {{first_name}},<br /><br />Chez
                                       GreenNation,
                                       <strong>notre mission</strong> a toujours
                                       été claire :<br /><strong
@@ -578,14 +614,14 @@
                       border="0"
                       cellpadding="0"
                       cellspacing="0"
-                      class="row-content stack"
+                      class="row-content"
                       role="presentation"
                       style="
                         mso-table-lspace: 0pt;
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -624,7 +660,7 @@
                                       <img
                                         alt="Alerte"
                                         height="auto"
-                                        src="https://public-assets.greennation.green/email/template/warning.svg"
+                                        src="https://public-assets.greennation.green/email/template/warning.png"
                                         style="
                                           display: block;
                                           height: auto;
@@ -723,7 +759,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -842,6 +878,7 @@
                 mso-table-lspace: 0pt;
                 mso-table-rspace: 0pt;
                 background-color: #3651f3;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -860,7 +897,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -920,7 +957,7 @@
                                             ><img
                                               alt="Instagram"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/instagram.svg"
+                                              src="https://public-assets.greennation.green/email/template/instagram.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -941,7 +978,7 @@
                                             ><img
                                               alt="TikTok"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/tiktok.svg"
+                                              src="https://public-assets.greennation.green/email/template/tiktok.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -962,7 +999,7 @@
                                             ><img
                                               alt="Linkedin"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/linkedin.svg"
+                                              src="https://public-assets.greennation.green/email/template/linkedin.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1032,7 +1069,7 @@
                                             ><img
                                               alt="Instagram"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/instagram.svg"
+                                              src="https://public-assets.greennation.green/email/template/instagram.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1053,7 +1090,7 @@
                                             ><img
                                               alt="TikTok"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/tiktok.svg"
+                                              src="https://public-assets.greennation.green/email/template/tiktok.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1074,7 +1111,7 @@
                                             ><img
                                               alt="Linkedin"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/linkedin.svg"
+                                              src="https://public-assets.greennation.green/email/template/linkedin.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1123,7 +1160,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -1201,6 +1238,7 @@
                 background-image: url('https://i.postimg.cc/mkp1B0st/frame-footer-2.png');
                 background-repeat: no-repeat;
                 background-size: cover;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -1220,7 +1258,7 @@
                         background-size: auto;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -1283,6 +1321,7 @@
                 mso-table-lspace: 0pt;
                 mso-table-rspace: 0pt;
                 background-color: #171d1b;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -1301,7 +1340,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -1452,6 +1491,7 @@
                 max-height: 0;
                 overflow: hidden;
                 background-color: #171d1b;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -1474,7 +1514,7 @@
                         overflow: hidden;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -1563,7 +1603,7 @@
                                       <img
                                         alt=""
                                         height="auto"
-                                        src="https://i.postimg.cc/JnqBdsY3/Group-5759.png"
+                                        src="https://public-assets.greennation.green/email/template/Group-5759.png"
                                         style="
                                           display: block;
                                           height: auto;
@@ -1597,6 +1637,7 @@
                 mso-table-lspace: 0pt;
                 mso-table-rspace: 0pt;
                 background-color: #171d1b;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -1615,7 +1656,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -1789,7 +1830,7 @@
                                             ><img
                                               alt="Instagram"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/instagram_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/instagram_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1810,7 +1851,7 @@
                                             ><img
                                               alt="TikTok"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/tiktok_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/tiktok_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1831,7 +1872,7 @@
                                             ><img
                                               alt="Linkedin"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/linkedin_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/linkedin_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -1870,6 +1911,7 @@
                 max-height: 0;
                 overflow: hidden;
                 background-color: #171d1b;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -1892,7 +1934,7 @@
                         overflow: hidden;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -2081,7 +2123,7 @@
                                             ><img
                                               alt="Instagram"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/instagram_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/instagram_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -2098,7 +2140,7 @@
                                             ><img
                                               alt="TikTok"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/tiktok_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/tiktok_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -2115,7 +2157,7 @@
                                             ><img
                                               alt="Linkedin"
                                               height="auto"
-                                              src="https://public-assets.greennation.green/email/template/linkedin_blue.svg"
+                                              src="https://public-assets.greennation.green/email/template/linkedin_blue.png"
                                               style="
                                                 display: block;
                                                 height: auto;
@@ -2150,6 +2192,7 @@
                 mso-table-lspace: 0pt;
                 mso-table-rspace: 0pt;
                 background-color: #171d1b;
+                max-width: 800px;
               "
               width="100%"
             >
@@ -2168,7 +2211,7 @@
                         mso-table-rspace: 0pt;
                         border-radius: 0;
                         color: #000000;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
@@ -2292,7 +2335,7 @@
                         border-radius: 0;
                         color: #000000;
                         padding: 15px;
-                        width: 600px;
+                        width: 750px;
                         margin: 0 auto;
                       "
                       width="600"
